@@ -7,7 +7,7 @@ public class ApiClient {
     private UserApiClient users;
     private OrdersApiClient orders;
 
-    private String token;
+    private String accessToken;
 
     public ApiClient() {
         RestAssured.baseURI = "https://stellarburgers.nomoreparties.site";
@@ -16,19 +16,17 @@ public class ApiClient {
         orders = new OrdersApiClient(this);
     }
 
-    public UserApiClient users() {
-        return users;
-    }
+    public UserApiClient users() { return users; }
 
     public OrdersApiClient orders() {
         return orders;
     }
 
-    public String getToken() {
-        return token;
+    public String getAccessToken() {
+        return accessToken;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
     }
 }

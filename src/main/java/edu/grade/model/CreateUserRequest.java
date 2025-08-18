@@ -18,6 +18,10 @@ public class CreateUserRequest {
         return name;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public CreateUserRequest withEmail(String email) {
         this.email = email;
         return this;
